@@ -5,6 +5,11 @@ import tensorflow as tf
 import os
 import argparse
 
+output_dir = 'output'
+### Create a dir to store o/p images
+if output_dir not in os.listdir():
+    os.makedirs(output_dir)
+
 parser = argparse.ArgumentParser()
 parser.add_argument('input_path', help="Argument for image path")
 args = parser.parse_args()
@@ -42,5 +47,6 @@ try:
     extension = '.' + extension
     print(save_as_file_name, extension)
     plt.savefig(os.path.join('output', save_as_file_name + extension))
+
 except Exception as e:
     print(e)
