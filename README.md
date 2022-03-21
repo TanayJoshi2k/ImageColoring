@@ -18,5 +18,7 @@
 <li class="has-line-data" data-line-start="15" data-line-end="16">Install the requirements:  <code>pip install requirements.txt</code></li>
 <li class="has-line-data" data-line-start="16" data-line-end="17">Navigate inside the sript dir</li>
 <li class="has-line-data" data-line-start="17" data-line-end="18">The script expects a string image path argument</li>
-<li class="has-line-data" data-line-start="18" data-line-end="19">Run the script: <code>python ImageColoring.py &lt;image_path&gt;</code></li>
+<li class="has-line-data" data-line-start="18" data-line-end="20">Run the script: <code>python ImageColoring.py &lt;image_path&gt;</code></li>
 </ul>
+<h4 class="code-line" data-line-start=20 data-line-end=21 ><a id="Train_your_own_encoder_20"></a>Train your own encoder</h4>
+<p class="has-line-data" data-line-start="21" data-line-end="22">I have attached the script that trains the encoder from scratch. Change the path to your data and hyperparameters as per your need.</p>
