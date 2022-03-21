@@ -46,6 +46,7 @@ try:
     pred = cv2.cvtColor(pred, cv2.COLOR_LAB2RGB)
 
     ### Save the image in the output folder
+    plt.figure(figsize=(5, 6), dpi=50)
     plt.imshow(pred)
     plt.show()
     save_as_file_name, extension = os.path.split(args.input_path)[-1].split(".")
