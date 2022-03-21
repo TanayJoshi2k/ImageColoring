@@ -5,8 +5,10 @@ import tensorflow as tf
 import os
 import argparse
 
-output_dir = 'output'
+os.chdir(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..')))
+
 ### Create a dir to store o/p images
+output_dir = 'output'
 if output_dir not in os.listdir():
     os.makedirs(output_dir)
 
@@ -14,7 +16,10 @@ parser = argparse.ArgumentParser()
 parser.add_argument('input_path', help="Argument for image path")
 args = parser.parse_args()
 
-model = tf.keras.models.load_model('model/color.h5')
+
+print(os.getcwd())
+
+model = tf.keras.models.load_model('./model/color.h5')
 try:
     test = cv2.imread(args.input_path)
     og_dim_x, og_dim_y = test.shape[0], test.shape[1]
